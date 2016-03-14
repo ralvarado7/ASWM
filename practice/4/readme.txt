@@ -1,0 +1,1 @@
+I copy the code for the countdown, I changed the way it was triggered. Also the amount of minutes comes from the user

@@ -1,0 +1,12 @@
+/* Stylesheet For Particular Projects */
+
+body.correct {
+  background-color:rgb(255, 255, 255)
+}
+#lives{
+	float: right;
+}
+#lives-counter{
+	font-size: 40px;
+	font-weight: bold;
+}

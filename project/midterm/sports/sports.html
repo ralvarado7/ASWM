@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" version="XHTML+RDFa 1.0" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta author="Rafael Virgili Alvarado Sanchez"/>
+    <script src="http://52.35.59.206/javascript/iam.js" charset="utf-8">//empty</script>
+    <title>Rafael Virgili Alvarado Sanchez, Midterm Project</title>
+    <!-- The capitalized paths below need to be adjusted -->
+    <!-- Reminder, you'll need ../ (up one directory)-->
+    <link rel="stylesheet" href="../../../styles/global.css"/>
+    <link rel="stylesheet" href="../styles/midterm-project.css"/>
+    <script src="../../../scripts/global.js" charset="utf-8">//empty</script>
+    <script src="../scripts/sports.js" charset="utf-8">//empty</script>
+    <script src="../scripts/midterm-project.js" charset="utf-8">//empty</script>
+  </head>
+  <body class="midterm-project">
+    <header>
+      <h1>Sports Trivia</h1>
+    </header>
+    <div id='lives'>
+      <p >You have <span id='lives-counter'>3</span> lives</p>
+    </div>
+    <main>
+      <div style='margin-top: 20px;'>
+        <a href="../index.html">Categories</a>
+      </div>
+      <h2>Press Start when you're ready</h2>
+      <button type='button' id='start'>Start!</button>
+      
+      <!--<div>
+        Your time is up in <span id="time"></span> minutes!
+      </div>-->
+      
+    </main>
+    <footer>
+      <p id="copyright">&#xA9; Rafael Virgili Alvarado Sanchez (eventually)</p>
+      <ul>
+        <li>
+          <a href="http://52.35.59.206/">Course Outline</a>
+        </li>
+        <li>
+          <a href="http://iam.colum.edu/students/Rafael.AlvaradoSanchez/ASWM/">Site Index</a>
+        </li>
+      </ul>
+    </footer>
+    <script type="text/javascript">
+      // <![CDATA[
+      // here is an example of a script directly embedded in a html document.
+      // I'm using it to accurately set the copyright date.
+      // These lines followed by 2 slashes are comments in JavaScript
+      // Comments are not rendered by the javascript engine.
+      var copyright = document.getElementById('copyright');
+      var year = (new Date()).getFullYear();
+      // this is fancy, it's called a regular expression - but we'll learn easier ways
+      copyright.innerHTML = copyright.innerHTML.replace(/^(.{1})(.*)/, '$1 '+year+'$2');
+      // ]]>
+    </script>
+  </body>
+</html>
