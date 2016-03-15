@@ -8,7 +8,16 @@ var filmCorrectAnswers = ['katherine hepburn',
 				   		 'peter jackson',
 				         'jodie foster',
 				   		 'jaws'];
+// films questions and answers
+var sportsQuestions = ['What colour jersey is worn by the winners of each stage of the Tour De France?',
+					 'Which chess piece can only move diagonally?',
+					 'In 2011, which country hosted a Formula 1 race for the first time?',
+					 'Which nation took home the Soccer World Cup in 2014? '];
 
+var sportsCorrectAnswers = ['yellow',
+				   		 'bishop',
+				         'india',
+				   		 'brazil'];
 
 var lives = 3;
 	function livesCounter(){

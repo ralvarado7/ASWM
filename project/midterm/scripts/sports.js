@@ -15,15 +15,7 @@
 //     }, 1000);
 // }
 window.addEventListener('load', function (){
-	var questions = ['What colour jersey is worn by the winners of each stage of the Tour De France?',
-					 'Which chess piece can only move diagonally?',
-					 'In 2011, which country hosted a Formula 1 race for the first time?',
-					 'Which nation took home the Soccer World Cup in 2014? '];
 
-	var correctAnswers = ['yellow',
-				   		 'bishop',
-				         'india',
-				   		 'brazil'];
 	
 	document.querySelector('#start').addEventListener('click', function filmTrivia(){
 		
@@ -38,7 +30,7 @@ window.addEventListener('load', function (){
 		document.querySelector('main').appendChild(div);
 
 		var question = document.createElement('p');
-		var questionCont = document.createTextNode(questions[0]);
+		var questionCont = document.createTextNode(sportsQuestions[0]);
 		question.appendChild(questionCont);
 		div.appendChild(question);
 
@@ -52,10 +44,7 @@ window.addEventListener('load', function (){
 		submitBtn.setAttribute('id', 'submit-button')
 		div.appendChild(submitBtn);
 
-		if (display.textContent == "00:50") {
-			restart();
-		};
-		if (questions.length == 0) {
+		if (sportsQuestions.length == 0) {
 			document.querySelector('main').removeChild(div);
 
 			var win = document.createElement('p');
@@ -66,14 +55,14 @@ window.addEventListener('load', function (){
 		};
 
 		document.querySelector('#submit-button').addEventListener('click', function(){
-			if (userAnswer.value == correctAnswers[0]) {
+			if (userAnswer.value == sportsCorrectAnswers[0]) {
 				document.querySelector('main').removeChild(div);
 				
-				questions.splice(0,1);
-				correctAnswers.splice(0,1);
+				sportsQuestions.splice(0,1);
+				sportsCorrectAnswers.splice(0,1);
 				filmTrivia();
 
-			} else if (userAnswer.value != correctAnswers[0]) {
+			} else if (userAnswer.value != sportsCorrectAnswers[0]) {
 				document.querySelector('#lives-counter').innerHTML = livesCounter();
 
 				var wrong = document.createElement('p')	
