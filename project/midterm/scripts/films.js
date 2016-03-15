@@ -15,15 +15,15 @@
 //     }, 1000);
 // }
 window.addEventListener('load', function (){
-	var questions = ['Which actress has won the most Oscars?',
-					'Name the director of the Lord of the Rings trilogy?',
-					'Name the actress whose career began at the age of 3, and who went on to star in films such as Contact, Maverick and The Silence of the Lambs?',
-					'The first movie ever given the title “Blockbuster” was which movie?'];
+	// var questions = ['Which actress has won the most Oscars?',
+	// 				'Name the director of the Lord of the Rings trilogy?',
+	// 				'Name the actress whose career began at the age of 3, and who went on to star in films such as Contact, Maverick and The Silence of the Lambs?',
+	// 				'The first movie ever given the title “Blockbuster” was which movie?'];
 
-	var correctAnswers = ['katherine hepburn',
-				   		 'peter jackson',
-				         'jodie foster',
-				   		 'jaws'];
+	// var correctAnswers = ['katherine hepburn',
+	// 			   		 'peter jackson',
+	// 			         'jodie foster',
+	// 			   		 'jaws'];
 	//amount of lives and counter
 	var lives = 3;
 	function livesCounter(){
@@ -68,14 +68,14 @@ window.addEventListener('load', function (){
 		};
 
 		document.querySelector('#submit-button').addEventListener('click', function(){
-			if (userAnswer.value == correctAnswers[0]) {
+			if (userAnswer.value == filmCorrectAnswers[0]) {
 				document.querySelector('main').removeChild(div);
 				
 				questions.splice(0,1);
 				correctAnswers.splice(0,1);
 				filmTrivia();
 
-			} else if (userAnswer.value != correctAnswers[0]) {
+			} else if (userAnswer.value != filmCorrectAnswers[0]) {
 				document.querySelector('#lives-counter').innerHTML = livesCounter();
 
 				var wrong = document.createElement('p')	

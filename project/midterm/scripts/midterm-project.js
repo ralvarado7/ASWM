@@ -1,3 +1,15 @@
+// films questions and answers
+var filmQuestions = ['Which actress has won the most Oscars?',
+					'Name the director of the Lord of the Rings trilogy?',
+					'Name the actress whose career began at the age of 3, and who went on to star in films such as Contact, Maverick and The Silence of the Lambs?',
+					'The first movie ever given the title “Blockbuster” was which movie?'];
+
+var filmCorrectAnswers = ['katherine hepburn',
+				   		 'peter jackson',
+				         'jodie foster',
+				   		 'jaws'];
+
+
 var lives = 3;
 	function livesCounter(){
 			return lives -= 1;
