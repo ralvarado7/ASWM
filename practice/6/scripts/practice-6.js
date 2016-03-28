@@ -1,5 +1,12 @@
-var assignment_title = 'Add Me';
+function factorial(number) {
+	if(number == 0){
+		return 1
+	} 
+	
+	return number * factorial (number - 1);
+}
 
-(function () {
-  console.log('I am an IIFE');
-}());
+function gdc (a , b){
+	if (b === 0) return a;
+	 
+}
