@@ -1,12 +1,12 @@
-function factorial(number) {
-	if(number == 0){
-		return 1
-	} 
+// function factorial(number) {
+// 	if(number == 0){
+// 		return 1
+// 	} 
 	
-	return number * factorial (number - 1);
-}
+// 	return number * factorial (number - 1);
+// }
 
-function gdc (a , b){
-	if (b === 0) return a;
+// function gdc (a , b){
+// 	if (b === 0) return a;
 	 
-}
+// }

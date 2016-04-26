@@ -8,9 +8,15 @@ header {
   background-color:rgba(255,255,255,0.5);
 }
 
-header, main, footer {
+header{
   margin:0;
   padding:1em;
+}
+
+footer{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 a {
