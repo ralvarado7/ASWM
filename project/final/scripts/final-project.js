@@ -50,6 +50,7 @@ window.addEventListener('load', function(){
 	
 	var ShockIndex = 0;
 	ThumbGhost.click(function(){
+		
 		// add the DOM for the shock image
 		var ShockImg = document.createElement('img');
 		var ImgContainer = document.getElementById('imgcontainer');
@@ -57,7 +58,7 @@ window.addEventListener('load', function(){
 		
 		//array of shock images
 		var ShockArray = ['clown_shock.png','samara.jpg','alien_shock.png','conjuring_shock.jpg','ex_shock.jpg','nina_shock.jpg',];
-		
+		var audio = new Audio('sounds/Psycho_ Scream.mp3');
 		//add the shock attr
 		function addShock(){
 				
@@ -65,6 +66,8 @@ window.addEventListener('load', function(){
 			ShockImg.setAttribute('id','shockimg');
 			ImgContainer.removeChild(document.getElementById('img'));
 			ShockIndex++;
+			//audio
+			audio.play();
 		}
 		setTimeout(addShock,1500);
 		
@@ -77,8 +80,9 @@ window.addEventListener('load', function(){
 
 			RoomImg.setAttribute('src', 'scary_img/room.jpg');
 			RoomImg.setAttribute('id', 'img');
+			audio.pause();
 		}
-		setTimeout(removeShock,2000)	
+		setTimeout(removeShock,3000)	
 	});
 		
 	
