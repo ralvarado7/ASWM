@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
 	var ThumbIndex = 0;
 	
 	// mask group for rectangle and circle
-	var maskrect = s.rect(0,0, 2000,2000);   
+	var maskrect = s.rect(0,0, 1200,799);   
 	maskrect.attr({
 	    fill: "white"
 	});
@@ -16,7 +16,10 @@ window.addEventListener('load', function(){
 	spotlightmask = s.group(maskrect, maskcircle);
 
 	// Add a black foreground rectangle to apply the mask to.
-	var blackfg = s.rect(0,0, 2000,1000);
+	var BlackScreen = s.rect(0,0, 1200,799);
+	BlackScreen.attr({
+		stroke: 'white'
+	})
 	
 	var ThumbGhost = s.image('scary_img/ghost.png',20,20,60,60);
 
@@ -31,9 +34,9 @@ window.addEventListener('load', function(){
 		//change coordinates of thumbs
 		setTimeout(function(){
 			ThumbImg.attr({
-			x: randomX,
-			y: randomY,
-			href: 'scary_img/'+ thumbs[ThumbIndex]
+				x: randomX,
+				y: randomY,
+				href: 'scary_img/'+ thumbs[ThumbIndex]
 			})
 		},500)
 		//change coordenates of ThumbGhost
@@ -41,8 +44,27 @@ window.addEventListener('load', function(){
 			x: randomX,
 			y: randomY
 		})
+		
+		var Thumbtop = document.createElement('img');
+		document.getElementById('menu').appendChild(Thumbtop);
+
+		Thumbtop.setAttribute('src', 'scary_img/'+thumbs[ThumbIndex-1]);
+		Thumbtop.setAttribute('height', '30px');
+
 		if(ThumbIndex > 5){
-			console.log('you won')
+			setTimeout(function(){
+				BlackScreen.remove();
+				maskcircle.remove();
+				maskrect.remove();
+
+				var text = ['You have defeated the evil','in this room.'];
+				var TextWin1 = s.text(200,200,text[0]);
+				TextWin1.attr({'font-size':120, fill: 'white'})
+
+				var TextWin2 = s.text(200,400,text[1]);
+				TextWin2.attr({'font-size':120, fill: 'white'})
+			},3000)
+		
 		}
 	}
 	
@@ -88,12 +110,12 @@ window.addEventListener('load', function(){
 	
 	//function to create and delete masks
 	function createMask(){
-		blackfg.attr({
+		BlackScreen.attr({
 		    mask: spotlightmask
 		});	
 	}
 	function deleteMask(){
-		blackfg.node.removeAttribute('mask');	
+		BlackScreen.node.removeAttribute('mask');	
 		//console.log('anything');
 		// console.log(Thumb);
 	}
