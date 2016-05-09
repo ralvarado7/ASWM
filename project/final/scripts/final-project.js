@@ -3,7 +3,7 @@ window.addEventListener('load', function(){
 	var s = Snap("#svg")
 
 	//pull the image thumb
-	var thumbs = ['clown_thumb.png','alien_thumb.png', 'ex_thumb.png', 'nina_thumb.png', 'conjuring_thumb.png'];
+	var thumbs = ['clown_thumb.png','samara_thumb.png','alien_thumb.png','conjuring_thumb.png', 'ex_thumb.png', 'nina_thumb.png'];
 	var ThumbImg = s.image('scary_img/'+ thumbs[0],20,20,60,60);
 	var ThumbIndex = 0;
 	
@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
 	maskrect.attr({
 	    fill: "white"
 	});
-	var maskcircle = s.circle(455,455,40);
+	var maskcircle = s.circle(455,455,55);
 	spotlightmask = s.group(maskrect, maskcircle);
 
 	// Add a black foreground rectangle to apply the mask to.
@@ -56,13 +56,14 @@ window.addEventListener('load', function(){
 		ImgContainer.insertBefore(ShockImg, ImgContainer.firstChild);
 		
 		//array of shock images
-		var ShockArray = ['clown_shock.png','alien_shock.png','ex_shock.jpg','nina_shock.jpg','conjuring_shock.jpg'];
+		var ShockArray = ['clown_shock.png','samara.jpg','alien_shock.png','conjuring_shock.jpg','ex_shock.jpg','nina_shock.jpg',];
 		
 		//add the shock attr
 		function addShock(){
 				
 			ShockImg.setAttribute('src','scary_img/' + ShockArray[ShockIndex]);
 			ShockImg.setAttribute('id','shockimg');
+			ImgContainer.removeChild(document.getElementById('img'));
 			ShockIndex++;
 		}
 		setTimeout(addShock,1500);
@@ -70,6 +71,12 @@ window.addEventListener('load', function(){
 		//remove the shock 
 		function removeShock(){
 			ImgContainer.removeChild(ShockImg);
+			
+			var RoomImg = document.createElement('img');
+			ImgContainer.appendChild(RoomImg);
+
+			RoomImg.setAttribute('src', 'scary_img/room.jpg');
+			RoomImg.setAttribute('id', 'img');
 		}
 		setTimeout(removeShock,2000)	
 	});

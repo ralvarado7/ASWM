@@ -1,7 +1,7 @@
 /* Stylesheet For Particular Projects */
 
 body {
-  background-color:'white'
+  background-color:black
 }
 #menu{
 	height: 50px;
@@ -11,15 +11,12 @@ body {
 #svgcontainer{
 	width: 1200px;
 	height: 799px;
-	margin-right: auto;
-	margin-left: auto
 }
 #svg{
 	position:absolute;
 	width: 1200px;
 	height: 799px
 }
-
 #img{
 	position: absolute;
 	width: 1200px;
@@ -27,8 +24,8 @@ body {
 }
 
 #shockimg{
-	width:1200px;
-	/*height: 100%;*/
+	width:1000px;
+	max-height: 100%;
 	margin-right: auto;
 	margin-left: auto
 }
