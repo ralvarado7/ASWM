@@ -26,7 +26,7 @@ window.addEventListener('load', function(){
 
 	//create a function that assigns random coordenates to the ghost circle
 	function changeCoor (){
-		var randomX = Math.floor(Math.random() * (1200 - 30 + 1)) + 30 + 'px';
+		var randomX = Math.floor(Math.random() * (1140 - 30 + 1)) + 30 + 'px';
 		var randomY = Math.floor(Math.random() * (799 - 50 + 1)) + 50 + 'px';
 		//Math.floor(Math.random() * (max - min + 1)) + min;
 		
